@@ -33,14 +33,14 @@
                         <Label Text="Игрок"
                            TextColor="Black"
                            FontAttributes="Bold"
-                           FontSize="Medium"/>
+                           FontSize="20"/>
                         <Label Text="HP 100 / 100"
                                TextColor="Black"
-                               FontSize="Micro"/>
+                               FontSize="14"/>
                         <ProgressBar Progress="1" ProgressColor="Purple"/>
                         <Label Text="Сила: 6-12"
                                TextColor="Gray"
-                               FontSize="Micro"/>
+                               FontSize="12"/>
                     </VerticalStackLayout>
                 </Frame>
 
@@ -60,14 +60,14 @@
                         <Label Text="Монстр"
                                FontAttributes="Bold"
                                TextColor="Black"
-                               FontSize="Medium"/>
+                               FontSize="20"/>
                         <Label Text="HP 80 / 80"
-                               FontSize="Micro"
+                               FontSize="14"
                                TextColor="Black"/>
                         <ProgressBar Progress="1" ProgressColor="Purple"/>
                         <Label Text="Сила: 5-10"
                                TextColor="Gray"
-                               FontSize="Micro"/>
+                               FontSize="12"/>
                     </VerticalStackLayout>
                 </Frame>
 
