@@ -37,7 +37,7 @@
                         <Label Text="HP 100 / 100"
                                TextColor="Black"
                                FontSize="14"/>
-                        <ProgressBar Progress="1" ProgressColor="Purple"/>
+                        <ProgressBar x:Name="PlayerBar" Progress="1" ProgressColor="Purple"/>
                         <Label Text="Сила: 6-12"
                                TextColor="Gray"
                                FontSize="12"/>
@@ -64,7 +64,7 @@
                         <Label Text="HP 80 / 80"
                                FontSize="14"
                                TextColor="Black"/>
-                        <ProgressBar Progress="1" ProgressColor="Purple"/>
+                        <ProgressBar x:Name="MonsterBar" Progress="1" ProgressColor="Purple"/>
                         <Label Text="Сила: 5-10"
                                TextColor="Gray"
                                FontSize="12"/>
@@ -75,25 +75,32 @@
 
             <FlexLayout Direction="Row" JustifyContent="Center" Wrap="Wrap">
                 <Button BackgroundColor="LightGray"
-                        x:Name="CounterBtn"
+                        x:Name="Attack"
+                        Clicked="OnAttackClick"
+                        IsEnabled="False"
                         Text="Атаковать"  
                         TextColor="Black"
                         Margin="3"
                         HorizontalOptions="Center" />
                 <Button BackgroundColor="LightGray"
-                        x:Name="CounterBtn1"
+                        x:Name="Heall"
+                        Clicked="OnHealClick"
+                        IsEnabled="False"
                         Text="Вылечиться"  
                         TextColor="Black"
                         Margin="3"
                         HorizontalOptions="Center" />
                 <Button BackgroundColor="LightGray"
-                        x:Name="CounterBtn2"
+                        x:Name="SuperAttack"
+                        IsEnabled="False"
+                        Clicked="OnSuperAttackClick"
                         Text="Супер-атака"
                         TextColor="Black"
                         Margin="3"
                         HorizontalOptions="Center" />
                 <Button BackgroundColor="BlueViolet"
-                        x:Name="CounterBtn3"
+                        x:Name="NewGame"
+                        Clicked="OnNewGameClick"
                         Text="Новая игра"
                         TextColor="Black"
                         Margin="3"
@@ -109,7 +116,7 @@
                        HorizontalOptions="Fill"
                        HeightRequest="350">
                 <VerticalStackLayout>
-                    <Label Text="Бой начат..."
+                    <Label x:Name="battleLog" Text="Бой начат..."
                            TextColor="Black"/>
                 </VerticalStackLayout>
                 </Frame>
